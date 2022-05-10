@@ -9,6 +9,7 @@ describe('Pruebas para StudentService', () => {
     })
 
     test('Test 2: Obteniendo los emails de los estudiantes qu etengan certificación', () => {
+        const students = Reader.readJsonFile('./test/data/visualpartnersTest.json')
         const studentsEmailCertificados = StudentService.getStudentsEmailsCertification(students)
 
         expect(studentsEmailCertificados.length).toBe(10)

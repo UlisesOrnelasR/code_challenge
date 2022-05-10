@@ -15,4 +15,11 @@ describe('Pruebas para StudentService', () => {
         expect(studentsEmailCertificados[0]).toBe("Todd@visualpartnership.xyz")
         expect(studentsEmailCertificados.length).toBe(10)
     })
+
+    test('Test 3: Obteniendo estudiantes que tengan creditos > 500', () => {
+        const students = StudentService.getStudents('./test/data/visualpartnersTest.json')
+        const studentsCreditosMayores = StudentService.getStudentsCredits(students)
+
+        expect(studentsCreditosMayores).toBe(11)
+    })
 })

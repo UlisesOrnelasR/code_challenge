@@ -20,6 +20,6 @@ describe('Pruebas para StudentService', () => {
         const students = StudentService.getStudents('./test/data/visualpartnersTest.json')
         const studentsCreditosMayores = StudentService.getStudentsCredits(students)
 
-        expect(studentsCreditosMayores).toBe(11)
+        expect(studentsCreditosMayores.length).toBe(11)
     })
 })

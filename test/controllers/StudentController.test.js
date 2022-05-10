@@ -6,4 +6,10 @@ describe('Pruebas para StudentController', () => {
 
         expect(students.length).toBe(19)
     })
+    test('Test 2: Obteniendo lista de emails de los students con certificacion', () => {
+        const students = StudentController.getStudentsPuente('./test/data/visualpartnersTest.json')
+        const studentsEmails = StudentController.getStudentsEmailsCertificationPuente(students)
+
+        expect(studentsEmails[0]).toBe('Todd@visualpartnership.xy')
+    })
 })

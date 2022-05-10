@@ -11,5 +11,6 @@ describe('Pruebas para StudentController', () => {
         const studentsEmails = StudentController.getStudentsEmailsCertificationPuente(students)
 
         expect(studentsEmails[0]).toBe('Todd@visualpartnership.xy')
+        expect(studentsEmails.length).toBe(9)
     })
 })

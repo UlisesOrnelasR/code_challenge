@@ -10,7 +10,7 @@ describe('Pruebas para StudentController', () => {
         const students = StudentController.getStudentsPuente('./test/data/visualpartnersTest.json')
         const studentsEmails = StudentController.getStudentsEmailsCertificationPuente(students)
 
-        expect(studentsEmails[0]).toBe('Todd@visualpartnership.xy')
-        expect(studentsEmails.length).toBe(9)
+        expect(studentsEmails[0]).toBe('Todd@visualpartnership.xyz')
+        expect(studentsEmails.length).toBe(10)
     })
 })

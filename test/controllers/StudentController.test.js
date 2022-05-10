@@ -13,4 +13,11 @@ describe('Pruebas para StudentController', () => {
         expect(studentsEmails[0]).toBe('Todd@visualpartnership.xyz')
         expect(studentsEmails.length).toBe(10)
     })
+    test('Test 3: Filtrando students con creditos mayores a 500', () => {
+        const students = StudentController.getStudentsPuente('./test/data/visualpartnersTest.json')
+        const studentsConCreditosMayores = StudentController.getStudentsCreditsPuente(students)
+
+        expect(studentsConCreditosMayores.name[0]).toBe('Warren')
+        expect(studentsConCreditosMayores.length).toBe(11)
+    })
 })

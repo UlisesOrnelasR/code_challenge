@@ -17,7 +17,7 @@ describe('Pruebas para StudentController', () => {
         const students = StudentController.getStudentsPuente('./test/data/visualpartnersTest.json')
         const studentsConCreditosMayores = StudentController.getStudentsCreditsPuente(students)
 
-        expect(studentsConCreditosMayores.name[0]).toBe('Warren')
+        expect(studentsConCreditosMayores[0].credits).toBe(508)
         expect(studentsConCreditosMayores.length).toBe(11)
     })
 })

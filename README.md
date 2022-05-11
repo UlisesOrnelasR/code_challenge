@@ -151,7 +151,7 @@ app.listen(port, () => {
 });
 ```
 
-Para iniciar el servido en `http://localhost:3000/`
+Para iniciar el servidor en `http://localhost:3000/`
 
 ```
 npm run server
@@ -162,3 +162,39 @@ Para detener el servidor
 ```
 Ctrl + C 
 ```
+
+## Agregando 1er endpoint🧾
+
+Despues de realizar todo lo anterior ya solamente restaba agregar los endpoint para finalizar el codigo, esto fue lo necesario para cumplir el primer requisito que era obtener los students con todos sus campos:
+
+![r1](https://user-images.githubusercontent.com/99143567/167783714-d8cf6a89-8464-4706-818f-861cac8b8fb1.JPG)
+
+Al hacer la consulta en `http://localhost:3000/v1/students` obtenemos:
+
+![Requerimiento1](https://user-images.githubusercontent.com/99143567/167783867-e3fb56db-e2a7-4fac-bc46-8eb2deae9415.png)
+
+## Agregando 2do endpoint📑
+
+Se necesito el siguiente codigo para el segundo endpoint donde obtenemos una lista de emails de los students que tienen cetificacion:
+
+![r2](https://user-images.githubusercontent.com/99143567/167784254-a2e58f62-1612-4593-ba14-eee788a54713.JPG)
+
+Al hacer la consulta en `http://localhost:3000/v1/students/emails` obtenemos:
+
+![Requerimiento2](https://user-images.githubusercontent.com/99143567/167784395-ab52bd33-ae2f-4fc2-a428-e761f3d06ff0.png)
+
+## Agregando 3er endpoint📈
+
+En el tercer endpoint necesitabamos obtener los students con creditos mayores a 500, para ello se agrego el siguiente código:
+
+![r3](https://user-images.githubusercontent.com/99143567/167784665-2bdcbcb8-04e7-4442-9a63-1ee2098ad93b.JPG)
+
+Al hacer la consulta en `http://localhost:3000/v1/students/credits` obtenemos:
+
+![Requerimiento3](https://user-images.githubusercontent.com/99143567/167784763-660d17a0-2d1c-4c2c-86b5-4c5155b7e82c.png)
+
+## ¡Y asi cumplimos con el proyecto asignado por parte de Visual Partner-Ship!✔
+
+
+
+

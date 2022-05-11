@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_ES","sentence":"^\\QPara ejecutar linter y que nos muestre las inconsistencias de nuestro código usaremos \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q y para corregirlas \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}

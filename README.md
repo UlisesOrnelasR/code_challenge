@@ -14,12 +14,12 @@ git clone https://github.com/UlisesOrnelasR/code_challenge.git
 
 1.- **Jest**: Para hacer pruebas de unidas y darle calidad a nuestro código
 
-Usaremos la version 26 de jest, porque no da problemas a la hora de automatizar las pruebas.
+Usaremos la versión 26 de jest, porque no da problemas a la hora de automatizar las pruebas.
 ```
 npm install jest@26.0.0 --save-dev
 ```
 
-2.- **ESLint**: Porque nuestro código tendra estilo, usaremos el de *Airbnb*.
+2.- **ESLint**: Porque nuestro código tendrá estilo, usaremos el de *Airbnb*.
 
 ```
 npm install eslint --save-dev
@@ -32,7 +32,7 @@ npm init @eslint/config
 
 ```
 
-Para ejecutar linter y que nos muestre las inconsistencias de nuestro codigo usaremos `npm run linter` y para corregirlas `npm run linter-fix`.
+Para ejecutar linter y que nos muestre las inconsistencias de nuestro código usaremos `npm run linter` y para corregirlas `npm run linter-fix`.
 
 3.- **Express**: Nos servirá para crear un servidor.
 
@@ -40,17 +40,17 @@ Para ejecutar linter y que nos muestre las inconsistencias de nuestro codigo usa
 npm install express --save
 ```
 
-#### El package.json ya viene configurado para automatizar las dependencias y poder ejecutarlas con un `npm run server`, modificalo dependiendo de la ubicación de tus archivos, en mi caso asi funciona correctamente:
+#### El package.json ya viene configurado para automatizar las dependencias y poder ejecutarlas con un `npm run server`, modifícalo dependiendo de la ubicación de tus archivos, en mi caso así funciona correctamente:
 
 ![package](https://user-images.githubusercontent.com/99143567/167772273-c5d4b207-4a85-4571-bbd4-3cafca8cb4d3.JPG)
 
-## Tenemos pruebas automatizadas! gracias a GitHub Actions🤖✅🦾
+## ¡Tenemos pruebas automatizadas! Gracias a GitHub Actions🤖✅🦾
 
-Decidimos hacer las pruebas atuomatizadas para hacer todos los test, y no estar haciendo uno por uno, fue sencillo, te lo explíco:
+Decidimos hacer las pruebas automatizadas para hacer todos los test, y no estar haciendo uno por uno, fue sencillo, te lo explico:
 
-1.- En la raíz de nuestro proyecto creamos una carpeta llamada `.github`, luego dentro de esta, creamos otra carpeta llamada `workflows` y finalmente dentro de esta ultima un archivo llamado `test.yml`, nuestra estructura para este archivo quedaría asi `.github/workflows/test.yml` 
+1.- En la raíz de nuestro proyecto creamos una carpeta llamada `.github`, luego dentro de esta, creamos otra carpeta llamada `workflows` y finalmente dentro de esta última un archivo llamado `test.yml`, nuestra estructura para este archivo quedaría así `.github/workflows/test.yml` 
 
-Agregamos el siguiente codigo al archivo `test.yml`
+Agregamos el siguiente código al archivo `test.yml`
 
 ```
 name: Run Tests in my project every push on GitHub
@@ -66,7 +66,7 @@ jobs:
       uses: stefanoeb/jest-action@1.0.3
 ```
 
-¡Guardamos los cambios, subimos lo cambios, hicimos un commit, un push y listo!. Asi es como automatizamos todos nuestros test para cada push que hicieramos.
+¡Guardamos los cambios, subimos los cambios, hicimos un commit, un push y listo!. Asi es como automatizamos todos nuestros test para cada push que hicieramos.
 
 
 ## Como fue la construcción de la solución del proyecto📝
@@ -79,7 +79,7 @@ Se nos pidieron tres cosas:
 
 ⚠3.- Habilitar un endpoint para consultar todos los estudiantes que tengan credits mayor a 500.⚠
 
-En este diagrama se muestra la estructura del proyecto que se creo:
+En este diagrama se muestra la estructura del proyecto que se creó:
 
 ```mermaid
 graph TD;
@@ -97,7 +97,7 @@ graph TD
 ```
 ## Utils🛠
 
-Se tiene que leer la DB proporcionada para eso se creo un archivo Reader.js en la carpeta utils(aqui van las clases auxiliares) donde se creara un método de lectura del archivo. Para esto, usara el método de Node llamado fs.readFileSync() para leer el archivo y devolver su contenido.
+Se tiene que leer la DB proporcionada para eso se creó un archivo Reader.js en la carpeta utils(aqui van las clases auxiliares) donde se creara un método de lectura del archivo. Para esto, usará el método de Node llamado fs.readFileSync() para leer el archivo y devolver su contenido.
 Esta clase Redera leerá el archivo que le indiquemos.
 
 ```mermaid
@@ -181,7 +181,7 @@ Al hacer la consulta en `http://localhost:3000/v1/students` obtenemos:
 
 ## Agregando 2do endpoint📑
 
-Se necesito el siguiente codigo para el segundo endpoint donde obtenemos una lista de emails de los students que tienen cetificacion:
+Se necesitó el siguiente codigo para el segundo endpoint donde obtenemos una lista de emails de los students que tienen cetificacion:
 
 ![r2](https://user-images.githubusercontent.com/99143567/167784254-a2e58f62-1612-4593-ba14-eee788a54713.JPG)
 

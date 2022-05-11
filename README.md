@@ -106,6 +106,8 @@ classDiagram
     Reader : +readJsonFile(filePath)
 ```
 
+![reader](https://user-images.githubusercontent.com/99143567/167786420-066c56b5-d4af-409e-a41e-24f9759951e1.JPG)
+
 ## Services⚙
 
 Se creó una clase StudentService en la carpeta services(aqui van las clases para aplicar la lógica que necesitamos) que llevara tres métodos static para obtener lo que necesitamos de los estudiantes.
@@ -117,6 +119,8 @@ classDiagram
     StudentService : +getStudentsEmailsCertification(students)
     StudentService : +getStudentsCredits(students)
 ```
+
+![StudentService](https://user-images.githubusercontent.com/99143567/167786471-61761935-3083-441f-8771-a2195b5c1837.JPG)
 
 ## Controllers🗜
 
@@ -130,6 +134,8 @@ classDiagram
     StudentController : +getStudentsEmailsCertificationPuente(students)
     StudentController : +getStudentsCreditsPuente(students)
 ```
+
+![StudentController](https://user-images.githubusercontent.com/99143567/167786539-39a01149-ce48-4fc8-97d2-3e4adbdc0565.JPG)
 
 ## Creación del server con Express 🗃
 
@@ -165,7 +171,7 @@ Ctrl + C
 
 ## Agregando 1er endpoint🧾
 
-Despues de realizar todo lo anterior ya solamente restaba agregar los endpoint para finalizar el codigo, esto fue lo necesario para cumplir el primer requisito que era obtener los students con todos sus campos:
+Despues de realizar todo lo anterior ya solamente restaba agregar los endpoint en `server.js` para finalizar el codigo, esto fue lo necesario para cumplir el primer requisito que era obtener los students con todos sus campos:
 
 ![r1](https://user-images.githubusercontent.com/99143567/167783714-d8cf6a89-8464-4706-818f-861cac8b8fb1.JPG)
 

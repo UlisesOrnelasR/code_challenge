@@ -69,15 +69,15 @@ jobs:
 ¡Guardamos los cambios, subimos lo cambios, hicimos un commit, un push y listo!. Asi es como automatizamos todos nuestros test para cada push que hicieramos.
 
 
-## Diseño de la solución del proyecto📝
+## Como fue la construcción de la solución del proyecto📝
 
 Se nos pidieron tres cosas:
 
-1.- Habilitar un endpoint para consultar todos los estudiantes con todos sus campos.
+⚠1.- Habilitar un endpoint para consultar todos los estudiantes con todos sus campos.⚠
 
-2.- Habilitar un endpoint para consultar los emails de todos los estudiantes que tengan certificación haveCertification.
+⚠2.- Habilitar un endpoint para consultar los emails de todos los estudiantes que tengan certificación haveCertification.⚠
 
-3.- Habilitar un endpoint para consultar todos los estudiantes que tengan credits mayor a 500.
+⚠3.- Habilitar un endpoint para consultar todos los estudiantes que tengan credits mayor a 500.⚠
 
 En este diagrama se muestra la estructura del proyecto que se creo:
 
@@ -87,7 +87,14 @@ graph TD;
     StudentService-->StudentController
     StudentController-->Server
 ```
-
+```mermaid
+graph TD
+    A[Server] --> B[API]
+    B --> C[localhost:3000]
+    C -->|/v1/students| D[GET]
+    C -->|/v1/students/emails| E[GET]
+    C -->|/v1/students/credits| F[GET]
+```
 ## Utils🛠
 
 Se tiene que leer la DB proporcionada para eso se creo un archivo Reader.js en la carpeta utils(aqui van las clases auxiliares) donde se creara un método de lectura del archivo. Para esto, usara el método de Node llamado fs.readFileSync() para leer el archivo y devolver su contenido.
@@ -124,3 +131,34 @@ classDiagram
     StudentController : +getStudentsCreditsPuente(students)
 ```
 
+## Creación del server con Express 🗃
+
+Se creó un script server.js en la carpeta lib de nuestro proyecto
+1.- Creamos un server basico de express 
+```
+const StudentController = require("./controllers/StudentController");
+const express = require("express");
+const app = express();
+app.use(express.json());
+const port = 3000;
+
+app.get("/", (request, response) => {
+    response.json({message: "Code_challenge Api welcome!"});
+});
+
+app.listen(port, () => {
+    console.log(`Code_challenge API in localhost:${port}`);
+});
+```
+
+Para iniciar el servido en `http://localhost:3000/`
+
+```
+npm run server
+```
+
+Para detener el servidor 
+
+```
+Ctrl + C 
+```

@@ -11,7 +11,7 @@ git clone https://github.com/UlisesOrnelasR/code_challenge.git
 ```
 
 - Descarga todas las dependencias
-- 
+
 ```
 npm install
 ```

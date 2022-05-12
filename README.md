@@ -10,6 +10,12 @@ Visual Partner-Ship nos ha asignado un nuevo proyecto...😄
 git clone https://github.com/UlisesOrnelasR/code_challenge.git
 ```
 
+- Descarga todas las dependencias
+- 
+```
+npm install
+```
+
 ## Las dependencias que estaremos utilizando:📚
 
 1.- **Jest**: Para hacer pruebas de unidas y darle calidad a nuestro código
